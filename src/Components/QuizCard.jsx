@@ -1,20 +1,39 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
-import { faEye } from "@fortawesome/free-solid-svg-icons";
-import React from "react";
+import { faEye, faXmark } from "@fortawesome/free-solid-svg-icons";
+import React, { useState } from "react";
 
 const QuizCard = ({ ques }) => {
-  const { question, options } = ques;
+  //   console.log(ques);
+  const { question, options, correctAnswer } = ques;
+  const [toggle, setToggle] = useState(false);
   return (
-    <div>
+    <div className="relative">
+      {toggle && (
+        <div className="absolute rounded-md top-2 bg-amber-400 text-gray-200 px-12 py-6 right-12 z-10">
+          <div className="relative">
+            <h1 className="text-2xl font-semibold">The Answer is:</h1>
+            <p>{correctAnswer}</p>
+            <FontAwesomeIcon
+              onClick={() => setToggle(!toggle)}
+              className="absolute -bottom-4 -right-10  text-xl px-3 rounded-full py-2 bg-amber-500 hover:cursor-pointer hover:bg-amber-600"
+              icon={faXmark}
+            ></FontAwesomeIcon>
+          </div>
+        </div>
+      )}
+
       <div className="relative px-4 py-8 mb-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10 rounded-lg bg-gray-200 text-gray-800">
         <h2 className="mb-8 text-2xl font-bold leading-none text-center">
           {question}
         </h2>
+
         <FontAwesomeIcon
-          className="text-amber-400 mb-4 text-3xl md:absolute md:top-4 md:right-4 hover:text-amber-600 hover:cursor-pointer"
+          onClick={() => setToggle(!toggle)}
+          className=" text-amber-400 mb-4 text-3xl md:absolute md:top-4 md:right-4 hover:text-amber-600 hover:cursor-pointer"
           icon={faEye}
         ></FontAwesomeIcon>
+
         <ul className="grid gap-3 md:grid-cols-2 ">
           {options.map((option) => (
             <li className="flex text-xl items-center space-x-2 border border-amber-400 px-4 py-8 rounded-md hover:bg-amber-400 hover:text-white hover:cursor-pointer">
