@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -6,8 +7,8 @@ export const Navbar = () => {
   return (
     <div className="px-4 py-5  mx-auto bg-gray-200 sm:max-w-xl md:max-w-full md:px-24 lg:px-8">
       <div className="relative flex items-center justify-between">
-        <a
-          href="/"
+        <Link
+          to="/"
           aria-label="Company"
           title="Company"
           className="inline-flex items-center"
@@ -30,37 +31,37 @@ export const Navbar = () => {
           <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
             Quiz Planet
           </span>
-        </a>
+        </Link>
         <ul className="flex items-center hidden space-x-8 lg:flex">
           <li>
-            <a
-              href="/"
+            <NavLink
+              to="/home"
               aria-label="Our product"
               title="Our product"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-amber-400"
+              className={({isActive})=>isActive ? "font-medium tracking-wide text-amber-400 ":"font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-amber-400"}
             >
               Home
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a
-              href="/"
+            <NavLink
+              to="/statistics"
               aria-label="Our product"
               title="Our product"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-amber-400"
+              className={({isActive})=>isActive ? "font-medium tracking-wide text-amber-400 ":"font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-amber-400"}
             >
               Statistics
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a
-              href="/"
+            <NavLink
+              to="/blog"
               aria-label="Product pricing"
               title="Product pricing"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-amber-400"
+              className={({isActive})=>isActive ? "font-medium tracking-wide text-amber-400 ":"font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-amber-400"}
             >
               Blog
-            </a>
+            </NavLink>
           </li>
         </ul>
         <div className="lg:hidden">
@@ -90,8 +91,8 @@ export const Navbar = () => {
               <div className="p-5 bg-white border rounded shadow-sm">
                 <div className="flex items-center justify-between mb-4">
                   <div>
-                    <a
-                      href="/"
+                    <Link
+                      to="/"
                       aria-label="Company"
                       title="Company"
                       className="inline-flex items-center"
@@ -114,7 +115,7 @@ export const Navbar = () => {
                       <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
                         Quiz Planet
                       </span>
-                    </a>
+                    </Link>
                   </div>
                   <div>
                     <button
@@ -135,34 +136,34 @@ export const Navbar = () => {
                 <nav>
                   <ul className="space-y-4">
                     <li>
-                      <a
-                        href="/"
+                      <NavLink
+                        to="/home"
                         aria-label="Our product"
                         title="Our product"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-amber-400"
+                        className={({isActive})=>isActive ? "font-medium tracking-wide text-amber-400 ":"font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-amber-400"}
                       >
                         Home
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
-                      <a
-                        href="/"
+                      <NavLink
+                        to="/statistics"
                         aria-label="Our product"
                         title="Our product"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-amber-400"
+                        className={({isActive})=>isActive ? "font-medium tracking-wide text-amber-400 ":"font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-amber-400"}
                       >
                         Statistics
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
-                      <a
-                        href="/"
+                      <NavLink
+                        to="/blog"
                         aria-label="Product pricing"
                         title="Product pricing"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-amber-400"
+                        className={({isActive})=>isActive ? "font-medium tracking-wide text-amber-400 ":"font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-amber-400"}
                       >
                         Blog
-                      </a>
+                      </NavLink>
                     </li>
                     
                   </ul>
