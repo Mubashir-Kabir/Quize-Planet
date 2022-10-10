@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const Statistics = () => {
-    return (
-        <div>
-            <h1>This is from Statistics page</h1>
-        </div>
-    );
+  return (
+    <div>
+      <h1>This is from Statistics page</h1>
+    </div>
+  );
 };
 
 export default Statistics;

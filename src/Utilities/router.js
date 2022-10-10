@@ -4,6 +4,7 @@ import Root from "./Root";
 import Statistics from "../Pages/Statistics";
 import Blog from "../Pages/Blog";
 import Error from "../Pages/Error";
+import Quiz from "../Pages/Quiz";
 
 const router = createBrowserRouter([
   {
@@ -13,10 +14,12 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
+        loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
         element: <Home></Home>,
       },
       {
         path: "/home",
+        loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
         element: <Home></Home>,
       },
       {
@@ -26,6 +29,12 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog></Blog>,
+      },
+      {
+        path: "/quiz/:id",
+        loader: ({ params }) =>
+          fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),
+        element: <Quiz></Quiz>,
       },
     ],
   },
