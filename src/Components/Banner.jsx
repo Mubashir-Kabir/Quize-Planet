@@ -15,8 +15,7 @@ const Banner = () => {
           <div className="max-w-xl mb-6">
             <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
               Test your knowledge
-              <br className="hidden md:block" />
-              with{" "}
+              <br className="hidden md:block" /> with
               <span className="relative px-1">
                 <div className="absolute inset-x-0 bottom-0 h-3 transform -skew-x-12 bg-gray-300" />
                 <span className="relative inline-block text-amber-400">
