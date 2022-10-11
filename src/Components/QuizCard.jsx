@@ -90,13 +90,3 @@ const QuizCard = ({ ques }) => {
 };
 
 export default QuizCard;
-
-{
-  /* <li
-  onClick={() => notify(option)}
-  className="flex text-xl items-center space-x-2 border border-amber-400 px-4 py-8 rounded-md hover:bg-amber-400 hover:text-white hover:cursor-pointer"
->
-  <FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>
-  <span>{option}</span>
-</li>; */
-}
