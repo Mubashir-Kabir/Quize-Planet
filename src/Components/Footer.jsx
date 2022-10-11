@@ -1,3 +1,5 @@
+import logo from "../Utilities/quiz-planet.png";
+
 export const Footer = () => {
   return (
     <div className="px-4 pt-16 mx-auto bg-gray-200 sm:max-w-xl md:max-w-full md:px-24 lg:px-8">
@@ -9,21 +11,8 @@ export const Footer = () => {
             title="Company"
             className="inline-flex items-center"
           >
-            <svg
-              className="w-8 text-amber-400"
-              viewBox="0 0 24 24"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeMiterlimit="10"
-              stroke="currentColor"
-              fill="none"
-            >
-              <rect x="3" y="1" width="7" height="12" />
-              <rect x="3" y="17" width="7" height="6" />
-              <rect x="14" y="1" width="7" height="6" />
-              <rect x="14" y="11" width="7" height="12" />
-            </svg>
+            <img className=" w-12" src={logo} alt="" />
+
             <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
               Quiz Planet
             </span>
