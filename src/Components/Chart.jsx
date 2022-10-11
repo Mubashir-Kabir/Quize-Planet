@@ -8,6 +8,7 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
+  ResponsiveContainer,
 } from "recharts";
 
 export default function Chart() {
@@ -25,23 +26,25 @@ export default function Chart() {
   });
 
   return (
-    <BarChart
-      width={700}
-      height={500}
-      data={data}
-      margin={{
-        top: 5,
-        right: 30,
-        left: 20,
-        bottom: 5,
-      }}
-    >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="name" />
-      <YAxis />
-      <Tooltip />
-      <Legend />
-      <Bar dataKey="total" fill="#FBBF24" />
-    </BarChart>
+    <div style={{ width: "100%", height: 400 }}>
+      <ResponsiveContainer>
+        <BarChart
+          data={data}
+          margin={{
+            top: 5,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Bar dataKey="total" fill="#FBBF24" barSize={60} />
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
   );
 }
