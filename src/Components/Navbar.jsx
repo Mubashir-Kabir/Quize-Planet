@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import logo from "../Utilities/quiz-planet.png";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,21 +14,7 @@ export const Navbar = () => {
           title="Company"
           className="inline-flex items-center"
         >
-          <svg
-            className="w-8 text-amber-400"
-            viewBox="0 0 24 24"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeMiterlimit="10"
-            stroke="currentColor"
-            fill="none"
-          >
-            <rect x="3" y="1" width="7" height="12" />
-            <rect x="3" y="17" width="7" height="6" />
-            <rect x="14" y="1" width="7" height="6" />
-            <rect x="14" y="11" width="7" height="12" />
-          </svg>
+          <img className=" w-12" src={logo} alt="" />
           <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
             Quiz Planet
           </span>
@@ -38,7 +25,11 @@ export const Navbar = () => {
               to="/home"
               aria-label="Our product"
               title="Our product"
-              className={({isActive})=>isActive ? "font-medium tracking-wide text-amber-400 ":"font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-amber-400"}
+              className={({ isActive }) =>
+                isActive
+                  ? "font-medium tracking-wide text-amber-400 "
+                  : "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-amber-400"
+              }
             >
               Home
             </NavLink>
@@ -48,7 +39,11 @@ export const Navbar = () => {
               to="/statistics"
               aria-label="Our product"
               title="Our product"
-              className={({isActive})=>isActive ? "font-medium tracking-wide text-amber-400 ":"font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-amber-400"}
+              className={({ isActive }) =>
+                isActive
+                  ? "font-medium tracking-wide text-amber-400 "
+                  : "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-amber-400"
+              }
             >
               Statistics
             </NavLink>
@@ -58,7 +53,11 @@ export const Navbar = () => {
               to="/blog"
               aria-label="Product pricing"
               title="Product pricing"
-              className={({isActive})=>isActive ? "font-medium tracking-wide text-amber-400 ":"font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-amber-400"}
+              className={({ isActive }) =>
+                isActive
+                  ? "font-medium tracking-wide text-amber-400 "
+                  : "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-amber-400"
+              }
             >
               Blog
             </NavLink>
@@ -87,7 +86,7 @@ export const Navbar = () => {
             </svg>
           </button>
           {isMenuOpen && (
-            <div className="absolute top-0 left-0 w-full">
+            <div className="absolute top-0 left-0 w-full z-10">
               <div className="p-5 bg-white border rounded shadow-sm">
                 <div className="flex items-center justify-between mb-4">
                   <div>
@@ -97,21 +96,8 @@ export const Navbar = () => {
                       title="Company"
                       className="inline-flex items-center"
                     >
-                      <svg
-                        className="w-8 text-deep-purple-accent-400"
-                        viewBox="0 0 24 24"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeMiterlimit="10"
-                        stroke="currentColor"
-                        fill="none"
-                      >
-                        <rect x="3" y="1" width="7" height="12" />
-                        <rect x="3" y="17" width="7" height="6" />
-                        <rect x="14" y="1" width="7" height="6" />
-                        <rect x="14" y="11" width="7" height="12" />
-                      </svg>
+                      <img className=" w-12" src={logo} alt="" />
+
                       <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
                         Quiz Planet
                       </span>
@@ -140,7 +126,11 @@ export const Navbar = () => {
                         to="/home"
                         aria-label="Our product"
                         title="Our product"
-                        className={({isActive})=>isActive ? "font-medium tracking-wide text-amber-400 ":"font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-amber-400"}
+                        className={({ isActive }) =>
+                          isActive
+                            ? "font-medium tracking-wide text-amber-400 "
+                            : "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-amber-400"
+                        }
                       >
                         Home
                       </NavLink>
@@ -150,7 +140,11 @@ export const Navbar = () => {
                         to="/statistics"
                         aria-label="Our product"
                         title="Our product"
-                        className={({isActive})=>isActive ? "font-medium tracking-wide text-amber-400 ":"font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-amber-400"}
+                        className={({ isActive }) =>
+                          isActive
+                            ? "font-medium tracking-wide text-amber-400 "
+                            : "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-amber-400"
+                        }
                       >
                         Statistics
                       </NavLink>
@@ -160,12 +154,15 @@ export const Navbar = () => {
                         to="/blog"
                         aria-label="Product pricing"
                         title="Product pricing"
-                        className={({isActive})=>isActive ? "font-medium tracking-wide text-amber-400 ":"font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-amber-400"}
+                        className={({ isActive }) =>
+                          isActive
+                            ? "font-medium tracking-wide text-amber-400 "
+                            : "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-amber-400"
+                        }
                       >
                         Blog
                       </NavLink>
                     </li>
-                    
                   </ul>
                 </nav>
               </div>
