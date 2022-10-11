@@ -24,3 +24,8 @@ You can visit this site at:
 The site is created with React.\
 CSS framework: [Tailwind](https://tailwindcss.com/).\
 Component Library: [Kitwind](https://kitwind.io/).\
+[React Router](https://reactrouter.com/en/main),
+[React Toastify](https://www.npmjs.com/package/react-toastify),
+[Rechart](https://recharts.org/en-US/),
+[Font Awesome](https://fontawesome.com/),
+are also used is this project.

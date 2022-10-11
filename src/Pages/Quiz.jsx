@@ -5,7 +5,6 @@ import QuizCard from "../Components/QuizCard";
 const Quiz = () => {
   const quiz = useLoaderData().data;
   const { total, name, logo, questions } = quiz;
-  console.log(quiz);
   return (
     <div>
       <div className="px-4 pt-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 ">

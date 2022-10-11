@@ -9,7 +9,6 @@ const QuizCard = ({ ques }) => {
   const { question, options, correctAnswer } = ques;
   const [toggle, setToggle] = useState(false);
   const notify = (option) => {
-    console.log(option, correctAnswer);
     if (option === correctAnswer) {
       toast.success("Great! Correct Answer", {
         position: "top-center",
@@ -65,7 +64,10 @@ const QuizCard = ({ ques }) => {
 
         <div className="grid gap-3 md:grid-cols-2 ">
           {options.map((option) => (
-            <div class="form-check pl-3 flex items-center border rounded-md  border-amber-400 ">
+            <div
+              key={Math.random() * Math.random()}
+              className="form-check pl-3 flex items-center border rounded-md  border-amber-400 "
+            >
               <input
                 className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-amber-400 checked:border-amber-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                 type="radio"
@@ -74,7 +76,7 @@ const QuizCard = ({ ques }) => {
                 onClick={() => notify(option)}
               />
               <label
-                class="form-check-label w-full h-full inline-block  text-xl  space-x-2  px-4 py-8 bg-amber-400 rounded-md text-white cursor-pointer "
+                className="form-check-label w-full h-full inline-block  text-xl  space-x-2  px-4 py-8 bg-amber-400 rounded-md text-white cursor-pointer "
                 htmlFor={option}
               >
                 {option}
