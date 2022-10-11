@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../Utilities/quiz-planet.png";
 
 export const Footer = () => {
@@ -19,12 +20,12 @@ export const Footer = () => {
           </a>
           <div className="mt-6 lg:max-w-sm">
             <p className="text-sm text-gray-800">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam.
+              Quiz Planet is a web-based Audience Engagement Cloud Platform for
+              hosting interactive trivia quizzes at in-person, virtual, and
+              hybrid events. No app install is required
             </p>
             <p className="mt-4 text-sm text-gray-800">
-              Eaque ipsa quae ab illo inventore veritatis et quasi architecto
-              beatae vitae dicta sunt explicabo.
+              Quiz Planet helps you to enriches your knowledge
             </p>
           </div>
         </div>
@@ -40,7 +41,7 @@ export const Footer = () => {
               title="Our phone"
               className="transition-colors duration-300 text-amber-400 hover:text-amber-600"
             >
-              850-123-5021
+              +880-969447776
             </a>
           </div>
           <div className="flex">
@@ -51,7 +52,7 @@ export const Footer = () => {
               title="Our email"
               className="transition-colors duration-300 text-amber-400 hover:text-amber-600"
             >
-              info@lorem.mail
+              quiz@planet.mail
             </a>
           </div>
           <div className="flex">
@@ -64,7 +65,7 @@ export const Footer = () => {
               title="Our address"
               className="transition-colors duration-300 text-amber-400 hover:text-amber-600"
             >
-              312 Lovely Street, NY
+              404 not found street, Nowhere
             </a>
           </div>
         </div>
@@ -100,14 +101,16 @@ export const Footer = () => {
             </a>
           </div>
           <p className="mt-4 text-sm text-gray-500">
-            Bacon ipsum dolor amet short ribs pig sausage prosciutto chicken
-            spare ribs salami.
+            You can follow and contact us:
           </p>
         </div>
       </div>
       <div className="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
         <p className="text-sm text-gray-600">
-          © Copyright 2020 Lorem Inc. All rights reserved.
+          © Copyright 2022. All rights reserved by{" "}
+          <Link className="text-amber-400" to="/">
+            Quiz Planet
+          </Link>
         </p>
         <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
           <li>
