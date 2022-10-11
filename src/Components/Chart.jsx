@@ -22,7 +22,6 @@ export default function Chart() {
       total,
     };
     data.push(obj);
-    console.log(data);
   });
 
   return (
