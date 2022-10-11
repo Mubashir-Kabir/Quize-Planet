@@ -6,9 +6,7 @@ Quiz Planet is a web-based Audience Engagement Cloud Platform for hosting intera
 
 ## Live Site:
 
-https://quiz-planet.netlify.app/
-
-You can visit this site at:
+You can visit this site at: https://quiz-planet.netlify.app/
 
 ## Features:
 
