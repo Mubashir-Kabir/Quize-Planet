@@ -15,7 +15,7 @@ const TopicCard = ({ topic }) => {
           <div className="p-5">
             <h6 className="mb-2 font-semibold leading-5">{name}</h6>
             <p className="text-sm text-gray-900">
-              Total Quize: <span>{total}</span>
+              Total Questions: <span>{total}</span>
             </p>
           </div>
           <div className="">
@@ -23,7 +23,7 @@ const TopicCard = ({ topic }) => {
               className="text-gray-200 text-xl font-semibold bg-amber-400 py-3 block rounded-b-lg w-full duration-300 transform hover:-translate-y-2 hover:bg-amber-600"
               to={`../quiz/${id}`}
             >
-              Start Quize
+              Start Quiz
             </Link>
           </div>
         </div>
